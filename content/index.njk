@@ -1,0 +1,68 @@
+---
+layout: base.njk
+pageTitle: Home
+---
+
+<div class="card">
+  <h2>Welcome to my Website!</h2>
+  <p>
+    Welcome to my little corner of the web! This site is meant to hold basically anything that I want to share with the world. My art, blogposts, anything goes!
+  </p>
+  <p>
+    This site is best viewed on desktop. I did try to make the design as responsive as I could, but I can't vouch for the viewing quality on mobile.
+  </p>
+  <p>
+    Please bear with me as I continue working on the page. I'm still learning how all this works! I am bound to mess up eventually. In the meantime, 
+    <a href="https://neocities.org/site/ladyisabel0052" target="_blank">follow me on Neocities</a> for updates!
+  </p>
+  <div class="blinkies-container">
+    <img src="/assets/neocities.gif" alt="Neocities, the web is yours">
+    <img src="/assets/coded-by-a-human.png" alt="Coded by a human">
+    <img src="/assets/trans-rights-now.png" alt="Trans rights now!">
+    <img src="/assets/install-linux-now.png" alt="Install Linux now!">
+    <img src="/assets/misc-thismachine.png" alt="This machine kills fascists">
+  </div>
+</div>
+
+<div class="card">
+  <figure class="card-avatar">
+    <img src="/assets/Izzy_comm_transparent_trim.png" alt="A picture of my online persona. An elf woman with white freckled skin, green eyes and long braided ginger hair. She's wearing denim overalls over a yellow crop top t-shirt.">
+    <figcaption>Yours truly!</figcaption>
+  </figure>
+  <h2>About me</h2>
+  <p>
+    Eyo! My name is Isabel (she/her), but I usually go by LadyIsabel (or Lady of the Isles when I'm feeling pretentious) online. I'm a computer science 
+    student from Portugal in her 20's. Web and interface design are my favorite parts of working with computers. I wasn't very online when I was younger, but I grew up playing 
+    videogames, and over the years I started delving deeper and deeper into the web. 
+  </p>
+  <p>
+    I'm a huge fantasy nut. Elder Scrolls, Dragon Age, and Guild Wars are some of my main brainrots. I also draw and write occasionally. I like to learn a little bit 
+    of pretty much anything and everything, though outside of my field of study, my favorite area is probably History.
+  </p>
+  <p>Read my <a href="/about/me">about me</a> page for more details!</p>
+</div>
+
+<div class="card">
+  <div class="card-column-container">
+    <div class="column">
+      <h3>To Do</h3>
+      <div class="list-container">
+        <ul class="log">
+          {% for item in todo %}
+            <li>{{item}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="column">
+      <h3>Changelog</h3>
+      <div class="list-container">
+        <ul class="log">
+          {% for item in changelog | reverse%}
+            <li>{{item}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+/* =========================================
+   Color Variables
+   ========================================= */
+:root {
+  --color-bg:           #d6e8d6;
+  --color-surface:      #eaf4ea;
+  --color-surface-alt:  #f2f9f2;
+  --color-border:       #a8c8a8;
+  --color-border-strong:#7aaa7a;
+  --color-text:         #2e4a2e;
+  --color-text-muted:   #557a55;
+  --color-text-faint:   #7a9e7a;
+  --color-hover:        #c4dcc4;
+  --color-hover-deep:   #b8d4b8;
+  --color-dropdown-bg:  #dceedd;
+}
+
+html.dark {
+  --color-bg:           #1a2e1a;
+  --color-surface:      #1f3b1f;
+  --color-surface-alt:  #243f24;
+  --color-border:       #3a5e3a;
+  --color-border-strong:#4d7a4d;
+  --color-text:         #c8e6c8;
+  --color-text-muted:   #9abf9a;
+  --color-text-faint:   #6e9e6e;
+  --color-hover:        #2a4a2a;
+  --color-hover-deep:   #335233;
+  --color-dropdown-bg:  #223822;
+}

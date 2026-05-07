@@ -1,0 +1,54 @@
+/* =========================================
+   Sidebar
+   ========================================= */
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background-color: var(--color-surface);
+  padding: 0;
+  border-radius: 12px;
+  border: 2px solid var(--color-border-strong);
+  overflow: hidden;
+}
+
+.sidebar h2 {
+  font-family: "VT323", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  padding: 1rem;
+  border-bottom: 2px solid var(--color-border-strong);
+}
+
+.sidebar ul {
+  font-family: "VT323";
+  font-size: 1.40rem;
+  list-style: none;
+}
+
+.sidebar ul li {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar ul li:last-child {
+  border-bottom: none;
+}
+
+.sidebar ul li a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+
+.sidebar ul li a:hover {
+  background-color: var(--color-hover);
+  text-decoration: none;
+}
+
+.nav-sprite {
+  width: 1.40rem;
+  image-rendering: pixelated;
+  padding-right: .5rem;
+}

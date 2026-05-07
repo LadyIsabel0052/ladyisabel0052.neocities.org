@@ -1,0 +1,70 @@
+/* =========================================
+   Right Panel
+   ========================================= */
+.right-panel {
+  width: 240px;
+  flex-shrink: 0;
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  border: 2px solid var(--color-border-strong);
+}
+
+.right-panel h2 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.right-panel h3 {
+  margin: 0;
+}
+
+.right-panel p {
+  font-size: 0.9rem;
+  color: var(--color-text-faint);
+  line-height: 1.5;
+}
+
+.right-panel a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+    text-decoration-color: currentcolor;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+  border-bottom: 1px solid var(--color-border);
+}
+
+a.no-decor {
+  border: none;
+}
+
+a.no-decor:hover {
+  background-color: transparent !important;
+}
+
+.right-panel a:hover {
+  background-color: var(--color-hover);
+}
+
+.right-panel-container {
+  padding: 1rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.right-panel-container:last-child {
+  border-bottom: none;
+}
+
+.right-panel-container h3 {
+  font-size: 1.30rem;
+}
+
+textarea.code-textarea {
+  margin-top: 0.75rem;
+  width: 100%;
+  max-width: 15rem;
+  height: 5rem;
+}

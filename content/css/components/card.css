@@ -1,0 +1,269 @@
+/* =========================================
+   Card
+   ========================================= */
+.card {
+  background-color: var(--color-surface-alt);
+  border-radius: 12px;
+  border: 2px solid var(--color-border-strong);
+  padding: 1.5rem;
+}
+
+.card h2,h3 {
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.card h1 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.card ul {
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.card p {
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.card p.centered {
+  text-align: center;
+}
+
+.card p:last-child {
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+.card a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+    text-decoration-color: currentcolor;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.card a:hover {
+  background-color: var(--color-hover);
+}
+
+.card button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid var(--color-border-strong);
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  font-family: "VT323";
+  font-size: 1.20rem;
+  color: var(--color-text)
+}
+
+.card button:hover {
+  background-color: var(--color-hover);
+}
+
+.card-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-column-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  flex: 1;
+  margin: 0 2rem 0 2rem;
+}
+
+.list-container {
+  padding-top: 0.75rem;
+  padding-left: 0.5rem;
+  border-top: 1px solid var(--color-border-strong);
+  max-height: 20rem;
+  overflow: scroll;
+  margin-bottom: 1rem;
+}
+
+.blinkies-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.blinkies-container-left {
+  display: flex;
+  justify-content: left;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* =========================================
+   Card Images
+   ========================================= */
+
+/* Full-bleed image at the top of a card (outside padding) */
+.card-img {
+  display: block;
+  width: calc(100% + 3rem);
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 2px solid var(--color-border-strong);
+  object-fit: cover;
+  max-height: 240px;
+  image-rendering: auto;
+}
+
+/* Pixel-art variant */
+.card-img.pixelated {
+  image-rendering: pixelated;
+}
+
+/* Inline thumbnail floated to the side of text */
+.card-img-thumb {
+  float: right;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--color-border-strong);
+  margin: 0 0 0.75rem 1.25rem;
+  image-rendering: auto;
+}
+
+.card-img-thumb.pixelated {
+  image-rendering: pixelated;
+}
+
+/* Inline figure for avatar */
+.card-avatar {
+  text-align: center;
+  float: left;
+}
+
+.card-avatar img {
+  display: block;
+  max-width: 12rem;
+  margin: 0 auto;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+.card-avatar img.pixelated {
+  image-rendering: pixelated;
+}
+
+.card-avatar img.pride-flag {
+  image-rendering: pixelated;
+  border-radius: 0;
+  border: none;
+  width: auto;
+}
+
+.card-avatar figcaption {
+  margin-top: 0.5rem;
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  color: var(--color-text-faint);
+  letter-spacing: 0.03em;
+}
+
+/* Inline figure for 404 */
+.card-404 {
+  margin: 1rem;
+  text-align: center;
+}
+
+.card-404 img {
+  display: block;
+  width: 15rem;
+  margin: 0 auto;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.card-404 img.pixelated {
+  image-rendering: pixelated;
+}
+
+.card-404 figcaption {
+  margin-top: 0.5rem;
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  color: var(--color-text-faint);
+  letter-spacing: 0.03em;
+}
+
+/* Centered figure with optional caption */
+.card-figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.card-figure img {
+  display: block;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--color-border-strong);
+  margin: 0 auto;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+.card-figure img.pixelated {
+  image-rendering: pixelated;
+}
+
+.card-figure figcaption {
+  margin-top: 0.5rem;
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  color: var(--color-text-faint);
+  letter-spacing: 0.03em;
+}
+
+/* Image grid inside a card (2-up by default) */
+.card-img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.card-img-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--color-border-strong);
+  image-rendering: auto;
+}
+
+.card-img-grid img.pixelated {
+  image-rendering: pixelated;
+}
+
+/* Clearfix for thumb-floated layouts */
+.card::after {
+  content: "";
+  display: table;
+  clear: both;
+}

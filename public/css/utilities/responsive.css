@@ -1,0 +1,36 @@
+/* =========================================
+   Responsive Width
+   ========================================= */
+.content {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    max-width: 900px;
+  }
+
+  .sidebar,
+  .right-panel {
+    width: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .right-panel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    max-width: 100%;
+  }
+}

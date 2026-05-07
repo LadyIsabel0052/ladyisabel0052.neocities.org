@@ -1,0 +1,63 @@
+/* =========================================
+   Post Header (title + date row)
+   ========================================= */
+.post h2 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.post-date {
+  font-family: "VT323", monospace;
+  font-size: 1.25rem;
+  color: var(--color-text-faint);
+  font-weight: 400;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   Pagination
+   ========================================= */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-top: 1.25rem;
+  margin-top: 0.5rem;
+  border-top: 2px solid var(--color-border-strong);
+}
+
+.pagination-btn {
+  font-family: "VT323", monospace;
+  font-size: 1.40rem;
+  color: var(--color-text);
+  background: none;
+  border: 2px solid var(--color-border-strong);
+  border-radius: 8px;
+  padding: 0.2rem 0.65rem;
+  cursor: pointer;
+  line-height: 1.4;
+  transition: background-color 0.15s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: var(--color-hover);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.pagination-btn--active {
+  background-color: var(--color-hover-deep);
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}

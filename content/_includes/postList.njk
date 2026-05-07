@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ pageTitle }} | {{ site.title }}</title>
+  <link rel="icon" type="image/png" href="/assets/myfavicon.png">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <noscript>
+    <style>.post { display: block !important; } hr { display: block !important; }</style>
+  </noscript>
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+</head>
+<body>
+
+  <header class="header" id="start">
+    <h1>{{ site.headerTitle }}</h1>
+    <button id="theme-toggle"><img src="/assets/Sprite-moon.png" alt="Theme switch button icon" class="button-sprite"></button>
+  </header>
+
+  <div class="content">
+    <nav class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        {% for item in collections.navItems %}
+          {% if item.children %}
+            <li class="dropdown">
+              <button class="dropdown-toggle">
+                <img src="{{ item.icon }}" alt="{{ item.label }} button icon" class="nav-sprite">{{ item.label }}
+              </button>
+              <ul class="dropdown-menu">
+                {% for child in item.children %}
+                  <li><a href="{{ child.url }}">{{ child.label }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li>
+              <a href="{{ item.url }}">
+                <img src="{{ item.icon }}" alt="{{ item.label }} button icon" class="nav-sprite">{{ item.label }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <main class="main">
+      {{ content | safe }}
+
+      <div class="card" id="posts-card">
+        {% for post in collections.blog | reverse %}
+          <div class="post" data-date="{{ post.date | date('d MMM yyyy') }}">
+            <h2><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h2>
+            <p>{{ post.data.description or post.templateContent | truncate(200) | safe }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </main>
+
+    <aside class="right-panel">
+      {% include 'rightPanel.njk' %}
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p>{% include 'footer.njk' %}</p>
+  </footer>
+
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/pagination.js"></script>
+</body>
+</html>
