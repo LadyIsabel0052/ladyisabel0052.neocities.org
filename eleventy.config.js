@@ -48,9 +48,9 @@ module.exports = function (eleventyConfig) {
         label: "About",
         icon: "/assets/Sprite-about-light.png",
         children: [
-          { label: "About the site", url: "/about/about/" },
-          { label: "About Me",       url: "/about/me/" },
-          { label: "Site Manifesto", url: "/about/manifesto/" },
+          { label: "About the site", url: "/about/about" },
+          { label: "About Me",       url: "/about/me" },
+          { label: "Site Manifesto", url: "/about/manifesto" },
         ],
       },
       {
