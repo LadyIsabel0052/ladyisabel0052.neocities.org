@@ -66,13 +66,13 @@ module.exports = function (eleventyConfig) {
         label: "Creative stuff",
         icon: "/assets/Sprite-art-light.png",
         children: [
-          { label: "Art",     url: "/creative/art/" },
-          { label: "Writing", url: "/creative/writing/" },
+          { label: "Art",     url: "/creative/art" },
+          { label: "Writing", url: "/creative/writing" },
         ],
       },
       {
         label: "Credits",
-        url: "/credits/",
+        url: "/credits",
         icon: "/assets/Sprite-credits-light.png",
       },
     ];
