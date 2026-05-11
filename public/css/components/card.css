@@ -109,12 +109,20 @@
   margin-top: 0.75rem;
 }
 
+.blinkies-container img {
+  fex: 1;
+}
+
 .blinkies-container-left {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 0.75rem;
+}
+
+.blinkies-container-lef img {
+  fex: 1;
 }
 
 /* =========================================
