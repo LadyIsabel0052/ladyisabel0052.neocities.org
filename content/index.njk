@@ -13,7 +13,8 @@ pageTitle: Home
   </p>
   <p>
     Please bear with me as I continue working on the page. I'm still learning how all this works! I am bound to mess up eventually. In the meantime, 
-    <a href="https://neocities.org/site/ladyisabel0052" target="_blank">follow me on Neocities</a> for updates!
+    <a href="https://neocities.org/site/ladyisabel0052" target="_blank">follow me on Neocities</a> for updates, or 
+    <a href="#guestbook">leave a message on my guestbook!</a>
   </p>
   <div class="blinkies-container">
     <img src="/assets/neocities.gif" alt="Neocities, the web is yours">
@@ -49,7 +50,7 @@ pageTitle: Home
       <div class="list-container">
         <ul class="log">
           {% for item in todo %}
-            <li>{{item}}</li>
+            <li>{{item | safe}}</li>
           {% endfor %}
         </ul>
       </div>
@@ -65,4 +66,13 @@ pageTitle: Home
       </div>
     </div>
   </div>
+</div>
+
+<div class="card" id="guestbook">
+  <h2>Guestbook</h2>
+  <p>
+    If you liked my site, have any questions, or simply wish to leave your mark here, leave a message on my guestbook! 
+    Please leave your email in the message if you need me to contact you.
+  </p>
+  <iframe title="guestbook" class="guestbook" src="https://ladyisabel0052.atabook.org/"></iframe>
 </div>
