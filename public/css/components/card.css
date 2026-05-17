@@ -125,6 +125,14 @@
   flex: 1;
 }
 
+.verdantville {
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  border: var(--color-border-strong) ridge 4px;
+  background-color: var(--color-bg);
+}
+
 /* =========================================
    Guestbook
    ========================================= */
